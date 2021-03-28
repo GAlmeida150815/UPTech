@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6CD8C5E-C92C-4769-85AA-CEB8F2167643}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UPTech</RootNamespace>
+    <AssemblyName>UPTech</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>uptech_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbConn.cs" />
+    <Compile Include="Forms\categorias\categoriaR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\categorias\categoriaR.Designer.cs">
+      <DependentUpon>categoriaR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\categorias\categoriasR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\categorias\categoriasR.Designer.cs">
+      <DependentUpon>categoriasR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\categorias\categoriasV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\categorias\categoriasV.Designer.cs">
+      <DependentUpon>categoriasV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\categorias\categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\categorias\categoria.Designer.cs">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\compras\compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\compras\compra.Designer.cs">
+      <DependentUpon>compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\compras\compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\compras\compras.Designer.cs">
+      <DependentUpon>compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\loader.Designer.cs">
+      <DependentUpon>loader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\produtos\produtoR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\produtos\produtoR.Designer.cs">
+      <DependentUpon>produtoR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosC.Designer.cs">
+      <DependentUpon>produtosC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosR.Designer.cs">
+      <DependentUpon>produtosR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosA.Designer.cs">
+      <DependentUpon>produtosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\produtos\produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\produtos\produto.Designer.cs">
+      <DependentUpon>produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\produtos\produtosV.Designer.cs">
+      <DependentUpon>produtosV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoes.Designer.cs">
+      <DependentUpon>promocoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocaoR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocaoR.Designer.cs">
+      <DependentUpon>promocaoR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoesA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoesA.Designer.cs">
+      <DependentUpon>promocoesA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoesR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoesR.Designer.cs">
+      <DependentUpon>promocoesR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoesV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\promocoes\promocoesV.Designer.cs">
+      <DependentUpon>promocoesV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriaR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriaR.Designer.cs">
+      <DependentUpon>subcategoriaR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriasR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriasR.Designer.cs">
+      <DependentUpon>subcategoriasR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoria.Designer.cs">
+      <DependentUpon>subcategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriasV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriasV.Designer.cs">
+      <DependentUpon>subcategoriasV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriasA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\subcategorias\subcategoriasA.Designer.cs">
+      <DependentUpon>subcategoriasA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tokens\token.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tokens\token.Designer.cs">
+      <DependentUpon>token.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tokens\tokens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tokens\tokens.Designer.cs">
+      <DependentUpon>tokens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizadorR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizadorR.Designer.cs">
+      <DependentUpon>utilizadorR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizadoresR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizadoresR.Designer.cs">
+      <DependentUpon>utilizadoresR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizador.Designer.cs">
+      <DependentUpon>utilizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizadoresV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizadoresV.Designer.cs">
+      <DependentUpon>utilizadoresV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\utilizadores\utilizadoresA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\utilizadores\utilizadoresA.Designer.cs">
+      <DependentUpon>utilizadoresA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\categorias\categoriasA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\categorias\categoriasA.Designer.cs">
+      <DependentUpon>categoriasA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="template.Designer.cs">
+      <DependentUpon>template.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\uptech_logo.png" />
+    <None Include="Resources\uptechlogo2.png" />
+    <Content Include="uptech_logo.ico" />
+    <EmbeddedResource Include="Forms\categorias\categoriaR.resx">
+      <DependentUpon>categoriaR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\categorias\categoriasR.resx">
+      <DependentUpon>categoriasR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\categorias\categoriasV.resx">
+      <DependentUpon>categoriasV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\categorias\categoria.resx">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\compras\compra.resx">
+      <DependentUpon>compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\compras\compras.resx">
+      <DependentUpon>compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\produtos\produtoR.resx">
+      <DependentUpon>produtoR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\produtos\produtosC.resx">
+      <DependentUpon>produtosC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\produtos\produtosR.resx">
+      <DependentUpon>produtosR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\produtos\produtosA.resx">
+      <DependentUpon>produtosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\produtos\produto.resx">
+      <DependentUpon>produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\produtos\produtosV.resx">
+      <DependentUpon>produtosV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\promocoes\promocoes.resx">
+      <DependentUpon>promocoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\promocoes\promocaoR.resx">
+      <DependentUpon>promocaoR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\promocoes\promocoesA.resx">
+      <DependentUpon>promocoesA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\promocoes\promocoesR.resx">
+      <DependentUpon>promocoesR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\promocoes\promocoesV.resx">
+      <DependentUpon>promocoesV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\subcategorias\subcategoriaR.resx">
+      <DependentUpon>subcategoriaR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\subcategorias\subcategoriasR.resx">
+      <DependentUpon>subcategoriasR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\subcategorias\subcategoria.resx">
+      <DependentUpon>subcategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\subcategorias\subcategoriasV.resx">
+      <DependentUpon>subcategoriasV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\subcategorias\subcategoriasA.resx">
+      <DependentUpon>subcategoriasA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tokens\token.resx">
+      <DependentUpon>token.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tokens\tokens.resx">
+      <DependentUpon>tokens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\utilizadores\utilizadorR.resx">
+      <DependentUpon>utilizadorR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\utilizadores\utilizadoresR.resx">
+      <DependentUpon>utilizadoresR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\utilizadores\utilizador.resx">
+      <DependentUpon>utilizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\utilizadores\utilizadoresV.resx">
+      <DependentUpon>utilizadoresV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\utilizadores\utilizadoresA.resx">
+      <DependentUpon>utilizadoresA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\categorias\categoriasA.resx">
+      <DependentUpon>categoriasA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="template.resx">
+      <DependentUpon>template.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Resources\key-solid.png" />
+    <None Include="Resources\id-card-solid.png" />
+    <None Include="Resources\1x1.png" />
+    <EmbeddedResource Include="Forms\loader.resx">
+      <DependentUpon>loader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
